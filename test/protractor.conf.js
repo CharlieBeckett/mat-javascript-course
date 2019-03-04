@@ -14,7 +14,7 @@ automaticallyGenerateReport: true,
 removeExistingJsonReportFile: true
 
         }
-    }],
+    }], 
 
     specs: [
         'features/*.feature'
