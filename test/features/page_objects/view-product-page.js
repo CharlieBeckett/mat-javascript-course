@@ -11,7 +11,7 @@ var ViewProductPage = function() {
      * what our product name will be)
      */
     this.productName = function (product) {
-        return Element(by.cssContaintext('h2', product.name))
+        return element(by.cssContainingText('h2', product.name))
 
     }
 

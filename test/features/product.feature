@@ -7,7 +7,7 @@ Feature: Product managemenet
     Background: Ensure a product is in the system
         Given a product doesnt exist
             |name   | description   | price |
-            |carrots| orange veggie | 10    |
+            |orange pepper | orange veggie | 10    |
 
     Scenario:
         When I add the product

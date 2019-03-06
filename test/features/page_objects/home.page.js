@@ -19,7 +19,7 @@ var HomePage = function () {
      * @returns {ElementFinder} Element
      */
     this.productInTable = function (product) {
-        return Element(by.cssContainingText('.mat-cell'), product.name);
+        return element(by.cssContainingText('.mat-cell', product.name));
 
     }
 
