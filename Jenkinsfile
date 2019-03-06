@@ -19,9 +19,8 @@ pipeline {
 
                 bat "START /B npx webdriver-manager start && npm test"
             }
-        }
-        post {
-            always {
+             post {
+                always {
                 publishHTML([
                     allowMissing    : false ,
                     alwaysLinkToLastBuild : fasle,
@@ -31,6 +30,7 @@ pipeline {
                     reportName: 'BDD report',
                     reportTitles: ''])
             }
+             }
         }
     }
 
