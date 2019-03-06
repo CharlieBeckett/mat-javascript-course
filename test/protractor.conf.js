@@ -3,6 +3,16 @@ exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
     baseUrl:'http://localhost:8080/',
 
+    capabilities: {
+
+        browserName: 'chrome',
+
+        chromeOptions: {
+
+            args: [ "--headless", "--disable-gpu", "--windows-size=800,600"]
+        }
+    },
+
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework') ,
 
