@@ -10,8 +10,8 @@ pipeline {
 
 
         steps {
-            bat "npx webdriver-manager update"
-            bat "START /B  npx webdriver-manager start && npm test"
+            //bat ""
+            bat "START /B  npx webdriver-manager update && npx webdriver-manager start && npm test"
 
         }
              post {
