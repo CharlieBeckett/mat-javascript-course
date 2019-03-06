@@ -6,7 +6,11 @@ pipeline {
 
     stages {
         stage ('Install dependencies') {
-            bat "npm install"
+            steps {
+                bat "npm install"
+
+            }
+            
         }
 
         stage ('Start Selenium server') {
