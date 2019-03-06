@@ -1,7 +1,7 @@
 {
     "cucumberautocomplete.steps": [
-"test/features/stepdefinitions/*.js",
-"node_modules/qa-lib/src/step_defintions/*.js"
+        "test/features/step_defintions/*.js",
+        "node_modules/qa-lib/src/step_defintions/*.js"
 
     ],
     "cucumberautocomplete.syncfeatures":"test/features/*.feature",

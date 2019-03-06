@@ -4,14 +4,12 @@ first(second);
 
 first().then(
         second().then(
-            third().then()
-               forth(), "error handling)"
-        )
-        , "error handler"
-        )
-        , "error handler);
+            third().then(
+               forth(), "error handling"
+        ) , "error handler"
+        ), "error handler");
         
-        "
+        
 
 async function runner() {
 
@@ -22,4 +20,3 @@ async function runner() {
 
 }
 
-}

@@ -20,7 +20,7 @@ removeExistingJsonReportFile: true
         'features/*.feature'
     ],
     cucumberOpts: {
-        require: 'feature/step_definitions/*.steps.js',
+        require: 'features/step_definitions/*.steps.js',
         tags:false,
         format:'json:.tmp/results.json',
         profile:false,
