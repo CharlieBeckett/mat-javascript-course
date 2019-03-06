@@ -6,24 +6,11 @@ pipeline {
 
     stages {
         stage ('Install dependencies') {
-            steps {
-                bat "npm install"
-
-            }
             
-        }
 
-        stage ('Start Selenium server') {
-
-            steps {
-                bat "START /B  npx webdriver-manager update "
-
-            }
-        }
-
-        stage (' Run tests') {
 
         steps {
+            bat "npx webdriver-manager update"
             bat "START /B  npx webdriver-manager start && npm test"
 
         }
