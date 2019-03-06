@@ -26,9 +26,6 @@ pipeline {
                     reportFiles: 'index.html',
                     reportName: 'BDD report',
                     reportTitles: ''])
-                    
-
-                ])
             }
         }
     }
