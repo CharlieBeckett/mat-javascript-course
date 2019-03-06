@@ -28,6 +28,7 @@
     "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.0"
   },
   "dependencies": {
+    "awsm.css": "^3.0.2",
     "eslint-plugin-cucumber": "^1.2.0"
   }
 }

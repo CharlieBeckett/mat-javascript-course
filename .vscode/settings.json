@@ -1,5 +1,5 @@
 {
-    "cucumberautomcomplete.steps": [
+    "cucumberautocomplete.steps": [
 "test/features/stepdefinitions/*.js",
 "node_modules/qa-lib/src/step_defintions/*.js"
 
