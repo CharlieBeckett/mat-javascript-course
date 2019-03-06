@@ -22,7 +22,7 @@ pipeline {
                 always {
                 publishHTML([
                     allowMissing    : false ,
-                    alwaysLinkToLastBuild : fasle,
+                    alwaysLinkToLastBuild : false,
                     keepAll: false,
                     reportDir : '.tmp/report',
                     reportFiles: 'index.html',
