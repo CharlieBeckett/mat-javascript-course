@@ -5,13 +5,16 @@ pipeline {
     triggers { pollSCM ('* * * * *')}
 
     stages {
-        stage ('Install do everything') {
-            
-
-
-        steps {
+        stage ('Install dependencies') {
+            steps {
             bat "npm install"
             bat "npx webdriver-manager update"
+
+            }
+        },
+        stage ('Run tests') {
+        steps {
+            
             bat "START /B npx webdriver-manager start "
             bat "npm test"
         }
@@ -28,7 +31,6 @@ pipeline {
             }
              }
         }
-    }
-
+}
 
 }
