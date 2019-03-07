@@ -1,42 +1,42 @@
+var HtmlReporter = require('protractor-beautiful-reporter');
+
+
+
 exports.config = {
 
     seleniumAddress: 'http://localhost:4444/wd/hub',
     baseUrl:'http://localhost:8080/',
 
-    capabilities: {
 
-        browserName: 'chrome',
-
+    multiCapabilities: [{
+        browserName: 'firefox',
+        'moz:firefoxOptions': {
+            args: [ "--headless" ]
+          }
+      }, {
+        'browserName': 'chrome',
         chromeOptions: {
+            args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
+          }
+      }], 
+    /*capabilities: {
 
-            args: [ "--headless", "--disable-gpu", "--windows-size=800,600"]
-        }
+    }*/
+        
+ 
+
+
+    specs: ['products/*.spec.js'],
+    suites: {
+         products: 'products/*.spec.js'
     },
 
-    framework: 'custom',
-    frameworkPath: require.resolve('protractor-cucumber-framework') ,
-
-
-    plugins: [{
-        package: 'protractor-multiple-cucumber-html-reporter-plugin',
-        options:{
-automaticallyGenerateReport: true,
-removeExistingJsonReportFile: true
-
-        }
-    }], 
-
-    specs: [
-        'features/*.feature'
-    ],
-    cucumberOpts: {
-        require: 'features/step_definitions/*.steps.js',
-        tags:false,
-        format:'json:.tmp/results.json',
-        profile:false,
-        'no-source':true
-
-
+    framework: 'jasmine',
+    onPrepare: function() {
+        // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
+        jasmine.getEnv().addReporter(new HtmlReporter({
+           baseDirectory: 'tmp/screenshots',
+           docTitle: 'Products Report'
+        }).getJasmine2Reporter());
     }
-
 }
