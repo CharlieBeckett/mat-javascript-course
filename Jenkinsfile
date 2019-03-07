@@ -22,8 +22,8 @@ pipeline {
                     alwaysLinkToLastBuild : false,
                     keepAll: false,
                     reportDir : 'tmp/screenshots',
-                    reportFiles: 'index.html',
-                    reportName: 'BDD report',
+                    reportFiles: 'report.html',
+                    reportName: 'Fancy pants report',
                     reportTitles: ''])
             }
              }
