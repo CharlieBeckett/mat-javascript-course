@@ -25,7 +25,6 @@ removeExistingJsonReportFile: true
 
         }
     }], 
-
     specs: [
         'features/*.feature'
     ],

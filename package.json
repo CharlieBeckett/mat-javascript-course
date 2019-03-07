@@ -4,7 +4,8 @@
   "description": "Safebear Test Automation Framework",
   "main": "index.js",
   "scripts": {
-    "test": "protractor ./test/protractor.conf.js"
+    "test": "protractor ./test/protractor.conf.js",
+    "debug": "node --inspect-brk node_modules/protractor/bin/protractor ./test/protractor.conf.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "eslint": "^5.15.0",
     "eslint-plugin-protractor": "^1.41.1",
     "jsdoc": "^3.5.5",
+    "logger": "0.0.1",
     "protractor": "^5.4.2",
     "protractor-cucumber-framework": "^6.1.1",
     "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.0"

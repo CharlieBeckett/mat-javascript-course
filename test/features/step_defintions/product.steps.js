@@ -28,6 +28,10 @@ Given('a product doesnt exist', function (dataTable) {
   });
 
   When('I add the product', function () {
+
+    // Break point
+    //debugger ;
+    // run 'npm run debug' open 'chrome://inspect/#devices' and click 'inspect'
     actions.click(homepage.addProduct);
     actions.type(addProductPage.productName, this.product.name);
     actions.type(addProductPage.productDescription, this.product.description);
