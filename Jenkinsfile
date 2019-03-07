@@ -11,7 +11,7 @@ pipeline {
             bat "npx webdriver-manager update"
 
             }
-        },
+        }
         stage ('Run tests') {
         steps {
             
