@@ -20,7 +20,7 @@ pipeline {
                     allowMissing    : false ,
                     alwaysLinkToLastBuild : false,
                     keepAll: false,
-                    reportDir : '.tmp/report',
+                    reportDir : '.tmp/screenshots',
                     reportFiles: 'index.html',
                     reportName: 'BDD report',
                     reportTitles: ''])
