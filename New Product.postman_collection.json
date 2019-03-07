@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "e8848c71-10dd-475d-a9f0-f35a1010c5de",
+		"name": "New Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://34.217.24.4:3000/api/v1/products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c1824579-9b20-4945-95f0-a2c8aaf8cb15",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var namefield = pm.environment.get(\"name\");",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(namefield);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate",
+						"disabled": true
+					},
+					{
+						"key": "accept-language",
+						"value": "en-GB,en-US;q=0.9,en;q=0.8",
+						"disabled": true
+					},
+					{
+						"key": "content-length",
+						"value": "69",
+						"disabled": true
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "host",
+						"value": "34.217.24.4:3000",
+						"disabled": true
+					},
+					{
+						"key": "origin",
+						"value": "http://automate.safebear.co.uk:8080"
+					},
+					{
+						"key": "proxy-connection",
+						"value": "keep-alive",
+						"disabled": true
+					},
+					{
+						"key": "referer",
+						"value": "http://automate.safebear.co.uk:8080/product-add"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"prod_name\":\"{{name}}\",\"prod_desc\":\"{{description}}\",\"prod_price\":\"{{price}}\"}"
+				},
+				"url": {
+					"raw": "http://34.217.24.4:3000/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"34",
+						"217",
+						"24",
+						"4"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
